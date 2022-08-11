@@ -1,0 +1,171 @@
+html{
+  height: 100%;
+  overflow: hidden;
+  background: linear-gradient(
+    #110012,
+    #210124
+    )0 100% no-repeat;
+}
+h1{
+  font-family: 'Splash', cursive;
+  font-size: 135px;
+  color: #DF7861;
+  display: flex;
+  justify-content: center;
+  text-shadow: 4px 2px 2px #CB56DB,0 0 .6em #DF7861, 0 0 .02em #DF7861;
+  margin-top: 4rem;
+  margin-bottom: 0rem;
+}
+
+.flavor-text{
+  font-family: 'Albert Sans', sans-serif;
+  font-size: 30px;
+  font-weight: 800;
+  color: #ECB390;
+  display: flex;
+  justify-content: center;
+  text-shadow: .2px 2px 3px #CB56DB, 0px 0px .6em #DF7861;
+  padding-bottom: 1.5rem;
+  padding-top: 0rem;
+}
+
+.simon{
+  width: 27rem;
+  height: 27rem;
+  margin: 0 auto;
+  margin-top: 3rem;
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+  grid-template-columns: 1fr 1fr;
+}
+.button{
+  transition-property: opacity;
+  display: block;
+  width: 200px;
+  height: 200px;
+  border-radius: 5%;
+  box-shadow:5px 2px 4px #CB56DB,0 0 1.6em #37E2D5, 0 0 .06em #37E2D5;
+  pointer-events: none;
+  opacity: 95%;
+}
+ .sg{
+   opacity: 70%;
+ }
+
+.active{
+  pointer-events: all;
+}
+
+.pressed{
+  opacity:100%;
+}
+
+.g{
+  background-color: #9AE237;
+}
+.r{
+  background-color: #C70A80;
+}
+.y{
+  background-color: #FBCB0A;
+}
+.b{
+  background-color: #37E2D5;
+}
+
+@media screen and (max-height: 900px){
+  h1{
+    margin-top: 2rem;
+  }
+  .simon{
+    margin-top: 0rem;
+  }
+}
+
+.star{
+  position: absolute;
+  width: 3px;
+  height: 3px;
+  background: rgba(255,255,255,0.0);
+  border-radius: 5px;
+  z-index: -1;
+}
+
+.container{
+  position: absolute;
+  top: 51%;
+  height: 49%;
+  width: 100%;
+  overflow: hidden;
+  z-index: -1;
+
+}
+
+.horizon{
+  position:absolute;
+  background: #37E2D5;
+  z-index: -1;
+  animation-fill-mode: both;
+  animation-duration: 4s;
+}
+.h{
+  height: 3px;
+  animation-name: h-appear;
+}
+
+.v{
+  width: 3px;
+  top: -5%;
+  left: 50%;
+  animation-name: v-appear;
+  z-index: -1;
+}
+
+/*Animations*/
+
+@keyframes twinkle {
+  0%{
+    transform: scale(1,1);
+    background: rgba(255,255,255,0.0);
+    anitmation-timing-function: ease-in;
+  }
+  60%{
+    transform: scale(.8,.8);
+    background: rgba(255,255,255,1);
+    anitmation-timing-function: ease-out;
+  }
+  80%{
+    transform: scale(1,1);
+    background: rgba(255,255,255,0.0);
+  }
+  100%{
+    transform: scale(1,1);
+    background: rgba(255,255,255,0.0);
+  }
+
+}
+
+@keyframes h-appear{
+  from{
+    left: 50%;
+    width: 0%;
+    opacity: 20%;
+    animation-timing-function: cubic-bezier(1,-0.5,.44,1.32);
+  }
+  to{
+    left: 0;
+    width: 100%;
+    opacity:50%;
+  }
+}
+@keyframes v-appear{
+  from{
+    height: 0%;
+    opacity: 20%;
+    animation-timing-function: cubic-bezier(1,-0.5,.44,1.32);
+  }
+  to{
+    height:200%;
+    opacity:50%;
+  }
+}

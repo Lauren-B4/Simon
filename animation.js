@@ -23,7 +23,7 @@ function horizons(){
   }
 }
 
-stars();
+stars(); 
 
 /*left: '+((($(window).width()/5.5)*count)-200)+'px;*/
 /*right: '+((($(window).width()/5.5)*count)-200)+'px;*/
